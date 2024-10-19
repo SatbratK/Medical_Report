@@ -1,10 +1,11 @@
 <?php
 
+use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\PatientController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\FormController;
 use App\Http\Controllers\HomeController;
-use App\Http\Controllers\PatientDtlController;
+
 
 // Route for the welcome page
 Route::get('/', function () {
@@ -25,3 +26,4 @@ Route::post('save_patient_details', [FormController::class, 'store'])->name('sav
 
 Route::resource('patientDetails', PatientController::class);
 
+Route::resource('dashboard', DashboardController::class);
