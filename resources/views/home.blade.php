@@ -219,15 +219,15 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="./index.html" class="nav-link active">
+                <a href="{{route('patientDetails')}}" class="nav-link active">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Add Patient Report</p>
+                  <p>Add Patient Details</p>
                 </a>
               </li>
               <li class="nav-item">
                 <a href="./index2.html" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Patient Report List</p>
+                  <p>Add Patient Report</p>
                 </a>
               </li>
               <li class="nav-item">

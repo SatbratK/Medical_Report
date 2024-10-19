@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\PatientController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\FormController;
 use App\Http\Controllers\HomeController;
@@ -21,3 +22,6 @@ Route::get('/form', [FormController::class, 'index'])->name('form');
 
 
 Route::post('save_patient_details', [FormController::class, 'store'])->name('save_patient_details');
+
+Route::resource('patientDetails', PatientController::class);
+
