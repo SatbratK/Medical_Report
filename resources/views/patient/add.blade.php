@@ -17,23 +17,40 @@
                         <h4>Patient Information Form</h4>
                     </div>
                     <div class="card-body">
-                        <form>
+                        <!-- Display success message -->
+                        @if (session('success'))
+                            <div class="alert alert-success text-center">
+                                {{ session('success') }}
+                            </div>
+                        @endif
+
+                        <!-- Display error message -->
+                        @if (session('error'))
+                            <div class="alert alert-danger text-center">
+                                {{ session('error') }}
+                            </div>
+                        @endif
+
+                        <!-- Form submission -->
+                        <form action="{{ route('patientDetails.store') }}" method="POST">
+                        {{ csrf_field() }}
+
                             <div class="form-group row">
                                 <label for="patient_name" class="col-sm-2 col-form-label">Name</label>
                                 <div class="col-sm-10">
-                                    <input type="text" class="form-control" id="patient_name" name="patient_name">
+                                    <input type="text" class="form-control" id="patient_name" name="patient_name" required>
                                 </div>
                             </div>
                             <div class="form-group row">
                                 <label for="patient_age" class="col-sm-2 col-form-label">Age</label>
                                 <div class="col-sm-10">
-                                    <input type="text" class="form-control" id="patient_age" name="patient_age">
+                                    <input type="number" class="form-control" id="patient_age" name="patient_age" required min="0" max="120">
                                 </div>
                             </div>
                             <div class="form-group row">
                                 <label for="patient_sex" class="col-sm-2 col-form-label">Sex</label>
                                 <div class="col-sm-10">
-                                    <select class="form-control" id="patient_sex" name="patient_sex">
+                                    <select class="form-control" id="patient_sex" name="patient_sex" required>
                                         <option value="male">Male</option>
                                         <option value="female">Female</option>
                                         <option value="others">Others</option>
@@ -43,51 +60,21 @@
                             <div class="form-group row">
                                 <label for="patient_ward" class="col-sm-2 col-form-label">Ward</label>
                                 <div class="col-sm-10">
-                                    <select class="form-control" id="patient_ward" name="patient_ward">
-                                        <option value="1">1</option>
-                                        <option value="2">2</option>
-                                        <option value="3">3</option>
-                                        <option value="4">4</option>
-                                        <option value="5">5</option>
-                                        <option value="6">6</option>
-                                        <option value="7">7</option>
-                                        <option value="8">8</option>
-                                        <option value="9">9</option>
-                                        <option value="10">10</option>
-                                        <option value="11">11</option>
-                                        <option value="12">12</option>
-                                        <option value="13">13</option>
-                                        <option value="14">14</option>
-                                        <option value="15">15</option>
-                                        <option value="16">16</option>
-                                        <option value="17">17</option>
-                                        <option value="18">18</option>
-                                        <option value="19">19</option>
-                                        <option value="20">20</option>
-                                        <option value="21">21</option>
+                                    <select class="form-control" id="patient_ward" name="patient_ward" required>
+                                        @for ($i = 1; $i <= 21; $i++)
+                                            <option value="{{ $i }}">{{ $i }}</option>
+                                        @endfor
                                     </select>
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <label for="patient_registration_no" class="col-sm-2 col-form-label">Registration No</label>
-                                <div class="col-sm-10">
-                                    <input type="text" class="form-control" id="patient_registration_no"
-                                        name="patient_registration_no" readonly>
                                 </div>
                             </div>
 
                             <div class="d-flex justify-content-center mt-3">
-                                <button type="button" class="btn btn-primary mx-2" id="save_dlts">Save</button>
-                                <button type="button" class="btn btn-secondary mx-2">Previous</button>
-                                <button type="button" class="btn btn-secondary mx-2">Next</button>
-                                <button type="button" class="btn btn-warning mx-2">Update</button>
+                                <button type="submit" class="btn btn-primary mx-2" id="save_dlts">Save</button>
                             </div>
                         </form>
                     </div>
                 </div>
             </div>
-
-
         </div>
     </x-slot>
 </x-app-layout>

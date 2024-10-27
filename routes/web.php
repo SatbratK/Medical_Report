@@ -25,5 +25,7 @@ Route::get('/form', [FormController::class, 'index'])->name('form');
 Route::post('save_patient_details', [FormController::class, 'store'])->name('save_patient_details');
 
 Route::resource('patientDetails', PatientController::class);
+Route::get('patientList',[PatientController::class,'list'])->name('patientList');
+// Route::post('delete_patient', [PatientController::class, 'destroy'])->name('delete_patient');
 
 Route::resource('dashboard', DashboardController::class);

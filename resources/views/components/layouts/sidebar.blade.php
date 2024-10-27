@@ -14,7 +14,7 @@
                 <img src="dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
             </div>
             <div class="info">
-                <a href="#" class="d-block text-white">{{ Auth::user()->username}}</a>
+                
             </div>
         </div>
 
@@ -58,7 +58,7 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="./index3.html" class="nav-link">
+                            <a href="{{route('patientList')}}" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Patient list</p>
                             </a>
