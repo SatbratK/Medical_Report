@@ -96,7 +96,7 @@ return [
             'search_path' => 'public',
             'sslmode' => 'prefer',
         ],
-        'pgsql5' => [
+        'pgsql1' => [
             'driver' => 'pgsql',
             'host' => env('DB_HOST', 'localhost'),
             'port' => env('DB_PORT', '5432'),
@@ -105,7 +105,7 @@ return [
             'password' => env('DB_PASSWORD', '123'),
             'charset' => 'utf8',
             'prefix' => '',
-            'schema' => 'patient',
+            'schema' => 'pathology',
             'sslmode' => 'prefer',
         ],
 

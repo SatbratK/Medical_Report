@@ -5,6 +5,7 @@ use App\Http\Controllers\PatientController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\FormController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\ReportController;
 
 
 // Route for the welcome page
@@ -29,3 +30,7 @@ Route::get('patientList',[PatientController::class,'list'])->name('patientList')
 // Route::post('delete_patient', [PatientController::class, 'destroy'])->name('delete_patient');
 
 Route::resource('dashboard', DashboardController::class);
+
+//
+Route::get('report_add', [ReportController::class, 'index'])->name('report_add');
+Route::get('get_patient_details', [ReportController::class,'patient_details'])->name('get_patient_details');
