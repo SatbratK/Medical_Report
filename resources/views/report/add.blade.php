@@ -4,7 +4,7 @@
             <div class="container-fluid">
                 <div class="row mb-2">
                     <div class="col-sm-6">
-                        <h1 class="m-0">Patient Details Add</h1>
+                        <h1 class="m-0">Patient Report Add</h1>
                     </div>
                 </div>
             </div>
@@ -32,7 +32,7 @@
                         @endif
 
                         <!-- Form submission -->
-                        <form >
+                        <form>
                             {{ csrf_field() }}
                             <input type="hidden" name="patient_reg_no" id="patient_reg_no">
                             <input type="hidden" name="patient_id" id="patient_id">
@@ -44,7 +44,7 @@
                                     No.</label>
 
                                 <!-- Dropdown for Registration No. -->
-                                <div class="col-sm-10">
+                                <div class="col-sm-4">
                                     <select class="form-control" id="patient_registration_no"
                                         name="patient_registration_no" required>
                                         <option value="">Select Registration No.</option>
@@ -53,9 +53,17 @@
                                         @endforeach
                                     </select>
                                 </div>
+
+                                <!-- Label for Registration Date -->
+                                <label for="patient_registration_date" class="col-sm-2 col-form-label">Registration
+                                    Date</label>
+
+                                <!-- Datepicker for Registration Date -->
+                                <div class="col-sm-4">
+                                    <input type="date" class="form-control" id="patient_registration_date"
+                                        name="patient_registration_date" required>
+                                </div>
                             </div>
-
-
 
                             <!-- Name, Ward, and Age (Second Row) -->
                             <div class="form-group row">
@@ -69,7 +77,8 @@
                                 <!-- Ward -->
                                 <label for="patient_ward" class="col-sm-2 col-form-label">Ward</label>
                                 <div class="col-sm-2">
-                                    <select class="form-control" id="patient_ward" name="patient_ward" required>
+                                    <select class="form-control" id="patient_ward" name="patient_ward" required
+                                        disabled>
                                         @for ($i = 1; $i <= 21; $i++)
                                             <option value="{{ $i }}">{{ $i }}</option>
                                         @endfor
@@ -84,35 +93,75 @@
                                 </div>
                             </div>
 
+                            <!-- Collapsible Card for Hematology -->
+                            <div class="card card-primary">
+                                <div class="card-header">
+                                    <h3 class="card-title">Hematology</h3>
+                                    <div class="card-tools">
+                                        <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                                            <i class="fas fa-minus"></i>
+                                        </button>
+                                        <button type="button" class="btn btn-tool" data-card-widget="maximize"><i
+                                                    class="fas fa-expand"></i>
+                                            </button>
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <div class="form-group row">
 
-                            <!-- Submit Button -->
-                            <div class="d-flex justify-content-center mt-3">
-                                <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Report </button>
-                            </div>
+                                    </div>
+                                </div>
 
 
-                            <!-- Modal -->
-                            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
-                                aria-hidden="true">
-                                <div class="modal-dialog">
-                                    <div class="modal-content">
-                                        <div class="modal-header">
-                                            <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
-                                            <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                                aria-label="Close"></button>
+                                <!-- Collapsible Card for Hematology -->
+                                <div class="card card-primary">
+                                    <div class="card-header">
+                                        <h3 class="card-title">Serology</h3>
+                                        <div class="card-tools">
+                                            <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                                                <i class="fas fa-minus"></i>
+                                            </button>
+                                            <button type="button" class="btn btn-tool" data-card-widget="maximize"><i
+                                                    class="fas fa-expand"></i>
+                                            </button>
                                         </div>
-                                        <div class="modal-body">
-                                            ...
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="form-group row">
+                                            <!-- Hemoglobin -->
+                                            <label for="hemoglobin" class="col-sm-3 col-form-label">Hemoglobin
+                                                (g/dL)</label>
+                                            <div class="col-sm-9">
+                                                <input type="text" class="form-control" id="hemoglobin"
+                                                    name="hemoglobin" placeholder="Enter Hemoglobin">
+                                            </div>
                                         </div>
-                                        <div class="modal-footer">
-                                            <button type="button" class="btn btn-secondary"
-                                                data-bs-dismiss="modal">Close</button>
-                                            <button type="button" class="btn btn-primary">Save changes</button>
+                                        <div class="form-group row">
+                                            <!-- WBC -->
+                                            <label for="wbc" class="col-sm-3 col-form-label">WBC Count (x10^9/L)</label>
+                                            <div class="col-sm-9">
+                                                <input type="text" class="form-control" id="wbc" name="wbc"
+                                                    placeholder="Enter WBC Count">
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <!-- Platelets -->
+                                            <label for="platelets" class="col-sm-3 col-form-label">Platelets
+                                                (x10^9/L)</label>
+                                            <div class="col-sm-9">
+                                                <input type="text" class="form-control" id="platelets" name="platelets"
+                                                    placeholder="Enter Platelets">
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+
+
+
                         </form>
+
+
+
 
                     </div>
                 </div>
@@ -122,34 +171,36 @@
 </x-app-layout>
 <script>
     $(document).ready(function () {
-        $('#patient_registration_no').change(function () {
-            let patientId = $(this).val();
+        $('#patient_registration_no, #patient_registration_date').change(function () {
+            let patientId = $('#patient_registration_no').val();
+            let registrationDate = $('#patient_registration_date').val();
 
-            if (patientId) {
-                $.ajax({
-                    url: '/get_patient_details', // Update with your actual route
-                    type: 'GET',
-                    data: { patientId: patientId },
-                    success: function (response) {
-                        if (response.success) {
-                            // Update input fields with the fetched data
+            $.ajax({
+                url: '/get_patient_details', // Update with your actual route
+                type: 'GET',
+                data: { patientId: patientId, registration_date: registrationDate },
+                success: function (response) {
+                    if (response.success) {
+                        if (patientId) {
+                            // Populate form fields for a specific patient
                             $('#patient_name').val(response.data.name || '');
                             $('#patient_reg_no').val(response.data.registration_no || '');
                             $('#patient_id').val(response.data.id || '');
                             $('#patient_ward').val(response.data.ward || '');
                             $('#patient_age').val(response.data.age || '');
                         } else {
-                            alert('No details found for the selected patient.');
+                            // Handle the case where a list of patients is returned
+                            console.log('Filtered patients:', response.data);
                         }
-                    },
-                    error: function () {
-                        alert('An error occurred while fetching patient details.');
+                    } else {
+                        alert(response.message || 'No details found.');
                     }
-                });
-            } else {
-                // Clear all fields if no patient is selected
-                $('#patient_name, #patient_reg_no, #patient_id, #patient_ward, #patient_age').val('');
-            }
+                },
+                error: function () {
+                    alert('An error occurred while fetching patient details.');
+                }
+            });
         });
     });
+
 </script>

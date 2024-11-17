@@ -14,7 +14,7 @@ class ReportController extends Controller
     {
         // dd('ok');
         $patients = patientDtl::all()->where('is_active', true);
-       return view('report.add',['patients' => $patients]);
+        return view('report.add', ['patients' => $patients]);
     }
 
     /**
@@ -66,34 +66,51 @@ class ReportController extends Controller
     }
 
     public function patient_details(Request $request)
-{
-    // Validate the incoming request to ensure the `patientId` parameter exists
-    $request->validate([
-        'patientId' => 'required'
-    ]);
-
-    // Retrieve the patient details using the provided ID
-    $patient = patientDtl::where('id', $request->input('patientId'))->first();
-
-    if ($patient) {
-        // Return patient details in a JSON response
+    {
+        // Validate the incoming request
+        $request->validate([
+            'patientId' => 'required_without:registration_date', // At least one required
+            'registration_date' => 'nullable|date', // Ensure the date is valid
+        ]);
+    
+        // Check if a registration date is provided
+        if ($request->filled('registration_date')) {
+            $patients = patientDtl::whereDate('created_at', $request->input('registration_date'))
+                ->orderBy('id', 'desc')
+                ->get();
+        } else {
+            $patients = patientDtl::orderBy('id', 'desc')->get();
+        }
+    
+        // If filtering by patient ID
+        if ($request->filled('patientId')) {
+            $patient = $patients->firstWhere('id', $request->input('patientId'));
+    
+            if ($patient) {
+                return response()->json([
+                    'success' => true,
+                    'data' => [
+                        'id' => $patient->id,
+                        'name' => $patient->name,
+                        'registration_no' => $patient->registration_no,
+                        'ward' => $patient->ward,
+                        'age' => $patient->age,
+                    ],
+                ]);
+            } else {
+                return response()->json([
+                    'success' => false,
+                    'message' => 'Patient not found',
+                ]);
+            }
+        }
+    
+        // Return the filtered list of patients if no specific patient is selected
         return response()->json([
             'success' => true,
-            'data' => [
-                'id' => $patient->id,
-                'name' => $patient->name,
-                'registration_no' => $patient->registration_no,
-                'ward' => $patient->ward,
-                'age' => $patient->age,
-            ],
-        ]);
-    } else {
-        // Return an error response if the patient is not found
-        return response()->json([
-            'success' => false,
-            'message' => 'Patient not found',
+            'data' => $patients,
         ]);
     }
-}
+    
 
 }
