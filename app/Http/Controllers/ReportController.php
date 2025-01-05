@@ -13,7 +13,8 @@ class ReportController extends Controller
     public function index()
     {
         // dd('ok');
-        $patients = patientDtl::all()->where('is_active', true);
+        $patients = patientDtl::where('is_active', true)->get();
+        // dd($patients);
         return view('report.add', ['patients' => $patients]);
     }
 
@@ -31,6 +32,8 @@ class ReportController extends Controller
     public function store(Request $request)
     {
         //
+
+        dd($request->all());
     }
 
     /**
@@ -95,6 +98,7 @@ class ReportController extends Controller
                         'registration_no' => $patient->registration_no,
                         'ward' => $patient->ward,
                         'age' => $patient->age,
+                        'created_at' => $patient->created_at
                     ],
                 ]);
             } else {

@@ -3,9 +3,11 @@
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\PatientController;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\FormController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ReportController;
+
 
 
 // Route for the welcome page
@@ -34,3 +36,4 @@ Route::resource('dashboard', DashboardController::class);
 //
 Route::get('report_add', [ReportController::class, 'index'])->name('report_add');
 Route::get('get_patient_details', [ReportController::class,'patient_details'])->name('get_patient_details');
+Route::post('add_patient_report', [ReportController::class, 'store'])->name('add_patient_report');
