@@ -19,21 +19,21 @@
                     <div class="card-body">
                         <!-- Display success message -->
                         @if (session('success'))
-                            <div class="alert alert-success text-center">
-                                {{ session('success') }}
-                            </div>
+                        <div class="alert alert-success text-center">
+                            {{ session('success') }}
+                        </div>
                         @endif
 
                         <!-- Display error message -->
                         @if (session('error'))
-                            <div class="alert alert-danger text-center">
-                                {{ session('error') }}
-                            </div>
+                        <div class="alert alert-danger text-center">
+                            {{ session('error') }}
+                        </div>
                         @endif
 
                         <!-- Form submission -->
                         <form action="{{ route('patientDetails.store') }}" method="POST">
-                        {{ csrf_field() }}
+                            {{ csrf_field() }}
 
                             <div class="form-group row">
                                 <label for="patient_name" class="col-sm-2 col-form-label">Name</label>
@@ -63,8 +63,95 @@
                                     <select class="form-control" id="patient_ward" name="patient_ward" required>
                                         @for ($i = 1; $i <= 21; $i++)
                                             <option value="{{ $i }}">{{ $i }}</option>
-                                        @endfor
+                                            @endfor
                                     </select>
+                                </div>
+                            </div>
+
+
+                            <div class="card card-primary collapsed-card">
+                                <div class="card-header">
+                                    <h3 class="card-title">Required patient Diagnosis</h3>
+
+                                    <div class="card-tools">
+                                        <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-plus"></i>
+                                        </button>
+                                    </div>
+                                    <!-- /.card-tools -->
+                                </div>
+                                <!-- /.card-header -->
+                                <div class="card-body">
+                                    <label class="form-label"> Haematology
+                                        <div class="bootstrap-switch-container" style="width: 126px; margin-left: 0px;">
+                                            <span class="bootstrap-switch-handle-on bootstrap-switch-primary" style="width: 42px;">ON</span>
+                                            <span class="bootstrap-switch-label" style="width: 42px;">&nbsp;</span>
+                                            <span class="bootstrap-switch-handle-off bootstrap-switch-default" style="width: 42px;">OFF</span>
+                                            <input type="checkbox" name="my-checkbox" checked="" data-bootstrap-switch="">
+                                        </div>
+                                    </label>
+
+                                    <label class="form-label"> Serology
+                                        <div class="bootstrap-switch-container" style="width: 126px; margin-left: 0px;">
+                                            <span class="bootstrap-switch-handle-on bootstrap-switch-primary" style="width: 42px;">ON</span>
+                                            <span class="bootstrap-switch-label" style="width: 42px;">&nbsp;</span>
+                                            <span class="bootstrap-switch-handle-off bootstrap-switch-default" style="width: 42px;">OFF</span>
+                                            <input type="checkbox" name="my-checkbox" checked="" data-bootstrap-switch="">
+                                        </div>
+                                    </label>
+
+                                    <label class="form-label"> Biochemistry
+                                        <div class="bootstrap-switch-container" style="width: 126px; margin-left: 0px;">
+                                            <span class="bootstrap-switch-handle-on bootstrap-switch-primary" style="width: 42px;">ON</span>
+                                            <span class="bootstrap-switch-label" style="width: 42px;">&nbsp;</span>
+                                            <span class="bootstrap-switch-handle-off bootstrap-switch-default" style="width: 42px;">OFF</span>
+                                            <input type="checkbox" name="my-checkbox" checked="" data-bootstrap-switch="">
+                                        </div>
+                                    </label>
+
+                                    <label class="form-label"> Lipid Profile
+                                        <div class="bootstrap-switch-container" style="width: 126px; margin-left: 0px;">
+                                            <span class="bootstrap-switch-handle-on bootstrap-switch-primary" style="width: 42px;">ON</span>
+                                            <span class="bootstrap-switch-label" style="width: 42px;">&nbsp;</span>
+                                            <span class="bootstrap-switch-handle-off bootstrap-switch-default" style="width: 42px;">OFF</span>
+                                            <input type="checkbox" name="my-checkbox" checked="" data-bootstrap-switch="">
+                                        </div>
+                                    </label>
+
+                                    <label class="form-label"> LFT
+                                        <div class="bootstrap-switch-container" style="width: 126px; margin-left: 0px;">
+                                            <span class="bootstrap-switch-handle-on bootstrap-switch-primary" style="width: 42px;">ON</span>
+                                            <span class="bootstrap-switch-label" style="width: 42px;">&nbsp;</span>
+                                            <span class="bootstrap-switch-handle-off bootstrap-switch-default" style="width: 42px;">OFF</span>
+                                            <input type="checkbox" name="my-checkbox" checked="" data-bootstrap-switch="">
+                                        </div>
+                                    </label>
+
+                                    <label class="form-label"> Widal Slide Agglutination
+                                        <div class="bootstrap-switch-container" style="width: 126px; margin-left: 0px;">
+                                            <span class="bootstrap-switch-handle-on bootstrap-switch-primary" style="width: 42px;">ON</span>
+                                            <span class="bootstrap-switch-label" style="width: 42px;">&nbsp;</span>
+                                            <span class="bootstrap-switch-handle-off bootstrap-switch-default" style="width: 42px;">OFF</span>
+                                            <input type="checkbox" name="my-checkbox" checked="" data-bootstrap-switch="">
+                                        </div>
+                                    </label>
+
+                                    <label class="form-label"> Urine re
+                                        <div class="bootstrap-switch-container" style="width: 126px; margin-left: 0px;">
+                                            <span class="bootstrap-switch-handle-on bootstrap-switch-primary" style="width: 42px;">ON</span>
+                                            <span class="bootstrap-switch-label" style="width: 42px;">&nbsp;</span>
+                                            <span class="bootstrap-switch-handle-off bootstrap-switch-default" style="width: 42px;">OFF</span>
+                                            <input type="checkbox" name="my-checkbox" checked="" data-bootstrap-switch="">
+                                        </div>
+                                    </label>
+
+                                    <label class="form-label"> Others
+                                        <div class="bootstrap-switch-container" style="width: 126px; margin-left: 0px;">
+                                            <span class="bootstrap-switch-handle-on bootstrap-switch-primary" style="width: 42px;">ON</span>
+                                            <span class="bootstrap-switch-label" style="width: 42px;">&nbsp;</span>
+                                            <span class="bootstrap-switch-handle-off bootstrap-switch-default" style="width: 42px;">OFF</span>
+                                            <input type="checkbox" name="my-checkbox" checked="" data-bootstrap-switch="">
+                                        </div>
+                                    </label>
                                 </div>
                             </div>
 

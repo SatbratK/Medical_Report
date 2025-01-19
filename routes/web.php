@@ -37,3 +37,4 @@ Route::resource('dashboard', DashboardController::class);
 Route::get('report_add', [ReportController::class, 'index'])->name('report_add');
 Route::get('get_patient_details', [ReportController::class,'patient_details'])->name('get_patient_details');
 Route::post('add_patient_report', [ReportController::class, 'store'])->name('add_patient_report');
+
