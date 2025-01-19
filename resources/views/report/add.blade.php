@@ -317,9 +317,122 @@
                                 </div>
                             </div>
 
-                            <div class="col-sm-3 row">
-                                <button type="submit" class="btn btn-success"> Save </button>
-                            </div>
+                            <div class="card card-primary">
+                                <div class="card-header">
+                                    <h3 class="card-title">Biochemistry</h3>
+                                    <div class="card-tools">
+                                        <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                                            <i class="fas fa-minus"></i>
+                                        </button>
+                                        <button type="button" class="btn btn-tool" data-card-widget="maximize"><i
+                                                class="fas fa-expand"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <div class="form-group row">
+                                        <!-- Hemoglobin -->
+                                        <label for="vdrl" class="col-sm-3 col-form-label">Sugar</label>
+                                        <div class="col-sm-9">
+                                            <div class="form-group row">
+                                                <!-- Hemoglobin -->
+                                                <label for="fasting" class="col-sm-3 col-form-label">Fasting</label>
+                                                <div class="col-sm-9">
+                                                    <input type="text" class="form-control" id="fasting"
+                                                        name="fasting" placeholder="70-110mg/dl">
+                                                </div>
+                                            </div>
+                                            <div class="form-group row">
+                                                <!-- Hemoglobin -->
+                                                <label for="pp" class="col-sm-3 col-form-label">PP</label>
+                                                <div class="col-sm-9">
+                                                    <input type="text" class="form-control" id="pp"
+                                                        name="pp" placeholder="Upto-140mg/dl">
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group row">
+                                                <!-- Hemoglobin -->
+                                                <label for="random" class="col-sm-3 col-form-label">Random</label>
+                                                <div class="col-sm-9">
+                                                    <div class="form-group row">
+                                                        <!-- Hemoglobin -->
+                                                        <label for="urea" class="col-sm-3 col-form-label">Urea</label>
+                                                        <div class="col-sm-9">
+                                                            <input type="text" class="form-control" id="urea"
+                                                                name="urea" placeholder="(10-50)mg/dl">
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="form-group row">
+                                                        <!-- Hemoglobin -->
+                                                        <label for="creatine" class="col-sm-3 col-form-label">Creatine</label>
+                                                        <div class="col-sm-9">
+                                                            <input type="text" class="form-control" id="creatine"
+                                                                name="creatine" placeholder="M-0.6-1.5mg/dl F-0.6-1.4mg/dl">
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group row">
+                                                        <!-- Hemoglobin -->
+                                                        <label for="uric acid" class="col-sm-3 col-form-label">Uric acid</label>
+                                                        <div class="col-sm-9">
+                                                            <input type="text" class="form-control" id="uric acid"
+                                                                name="uric acid" placeholder="M-3.4-7.0mg/dl F-2.4-5.7mg/dl">
+
+                                                        </div>
+
+                                                        <div class="card card-primary">
+                                                            <div class="card-header">
+                                                                <h3 class="card-title">Lipid Profile</h3>
+                                                                <div class="card-tools">
+                                                                    <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                                                                        <i class="fas fa-minus"></i>
+                                                                    </button>
+                                                                    <button type="button" class="btn btn-tool" data-card-widget="maximize">
+                                                                        <i class="fas fa-expand"></i>
+                                                                    </button>
+                                                                </div>
+                                                            </div>
+                                                            <div class="card-body">
+                                                                <div class="form-group row">
+                                                                    <label for="cholesterol" class="col-sm-3 col-form-label">Cholesterol</label>
+                                                                    <div class="col-sm-9">
+                                                                        <input type="text" class="form-control" id="cholesterol" name="cholesterol" placeholder="150-200mg/dl">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="form-group row">
+                                                                    <label for="triglyceride" class="col-sm-3 col-form-label">Triglyceride</label>
+                                                                    <div class="col-sm-9">
+                                                                        <input type="text" class="form-control" id="triglyceride" name="triglyceride" placeholder="60-170mg/dl">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="form-group row">
+                                                                    <label for="hdl" class="col-sm-3 col-form-label">HDL</label>
+                                                                    <div class="col-sm-9">
+                                                                        <input type="text" class="form-control" id="hdl" name="hdl" placeholder="M-35-80mg/dl F-42-88mg/dl">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="form-group row">
+                                                                    <label for="ldl" class="col-sm-3 col-form-label">LDL</label>
+                                                                    <div class="col-sm-9">
+                                                                        <input type="text" class="form-control" id="ldl" name="ldl" placeholder="<130mg/dl(desirable) 130-159mg/dl(Borderline high risk for CHD) >160mg/dl(high risk for CHD)">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="form-group row">
+                                                                    <label for="vldl" class="col-sm-3 col-form-label">VLDL</label>
+                                                                    <div class="col-sm-9">
+                                                                        <input type="text" class="form-control" id="vldl" name="vldl" placeholder="">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+
+
+
+                                                        <div class="col-sm-3 row">
+                                                            <button type="submit" class="btn btn-success"> Save </button>
+                                                        </div>
 
                         </form>
                     </div>
