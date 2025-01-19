@@ -316,7 +316,6 @@
                                     </div>
                                 </div>
                             </div>
-
                             <div class="card card-primary">
                                 <div class="card-header">
                                     <h3 class="card-title">Biochemistry</h3>
@@ -324,115 +323,376 @@
                                         <button type="button" class="btn btn-tool" data-card-widget="collapse">
                                             <i class="fas fa-minus"></i>
                                         </button>
-                                        <button type="button" class="btn btn-tool" data-card-widget="maximize"><i
-                                                class="fas fa-expand"></i>
+                                        <button type="button" class="btn btn-tool" data-card-widget="maximize">
+                                            <i class="fas fa-expand"></i>
                                         </button>
                                     </div>
                                 </div>
                                 <div class="card-body">
                                     <div class="form-group row">
-                                        <!-- Hemoglobin -->
+                                        <!-- Sugar -->
                                         <label for="vdrl" class="col-sm-3 col-form-label">Sugar</label>
                                         <div class="col-sm-9">
                                             <div class="form-group row">
-                                                <!-- Hemoglobin -->
+                                                <!-- Fasting -->
                                                 <label for="fasting" class="col-sm-3 col-form-label">Fasting</label>
                                                 <div class="col-sm-9">
-                                                    <input type="text" class="form-control" id="fasting"
-                                                        name="fasting" placeholder="70-110mg/dl">
+                                                    <input type="text" class="form-control" id="fasting" name="fasting" placeholder="70-110mg/dl">
                                                 </div>
                                             </div>
                                             <div class="form-group row">
-                                                <!-- Hemoglobin -->
+                                                <!-- PP -->
                                                 <label for="pp" class="col-sm-3 col-form-label">PP</label>
                                                 <div class="col-sm-9">
-                                                    <input type="text" class="form-control" id="pp"
-                                                        name="pp" placeholder="Upto-140mg/dl">
+                                                    <input type="text" class="form-control" id="pp" name="pp" placeholder="Upto-140mg/dl">
                                                 </div>
                                             </div>
-
                                             <div class="form-group row">
-                                                <!-- Hemoglobin -->
+                                                <!-- Random -->
                                                 <label for="random" class="col-sm-3 col-form-label">Random</label>
                                                 <div class="col-sm-9">
-                                                    <div class="form-group row">
-                                                        <!-- Hemoglobin -->
-                                                        <label for="urea" class="col-sm-3 col-form-label">Urea</label>
-                                                        <div class="col-sm-9">
-                                                            <input type="text" class="form-control" id="urea"
-                                                                name="urea" placeholder="(10-50)mg/dl">
-                                                        </div>
-                                                    </div>
+                                                    <input type="text" class="form-control" id="random" name="random" placeholder="">
+                                                </div>
+                                            </div>
+                                            <div class="form-group row">
+                                                <!-- Urea -->
+                                                <label for="urea" class="col-sm-3 col-form-label">Urea</label>
+                                                <div class="col-sm-9">
+                                                    <input type="text" class="form-control" id="urea" name="urea" placeholder="(10-50)mg/dl">
+                                                </div>
+                                            </div>
+                                            <div class="form-group row">
+                                                <!-- Creatine -->
+                                                <label for="creatine" class="col-sm-3 col-form-label">Creatine</label>
+                                                <div class="col-sm-9">
+                                                    <input type="text" class="form-control" id="creatine" name="creatine" placeholder="M-0.6-1.5mg/dl F-0.6-1.4mg/dl">
+                                                </div>
+                                            </div>
+                                            <div class="form-group row">
+                                                <!-- Uric Acid -->
+                                                <label for="uric-acid" class="col-sm-3 col-form-label">Uric Acid</label>
+                                                <div class="col-sm-9">
+                                                    <input type="text" class="form-control" id="uric-acid" name="uric-acid" placeholder="M-3.4-7.0mg/dl F-2.4-5.7mg/dl">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card card-primary">
+                                <div class="card-header">
+                                    <h3 class="card-title">Lipid Profile</h3>
+                                    <div class="card-tools">
+                                        <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                                            <i class="fas fa-minus"></i>
+                                        </button>
+                                        <button type="button" class="btn btn-tool" data-card-widget="maximize">
+                                            <i class="fas fa-expand"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <div class="form-group row">
+                                        <label for="cholesterol" class="col-sm-3 col-form-label">Cholesterol</label>
+                                        <div class="col-sm-9">
+                                            <input type="text" class="form-control" id="cholesterol" name="cholesterol" placeholder="150-200mg/dl">
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label for="triglyceride" class="col-sm-3 col-form-label">Triglyceride</label>
+                                        <div class="col-sm-9">
+                                            <input type="text" class="form-control" id="triglyceride" name="triglyceride" placeholder="60-170mg/dl">
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label for="hdl" class="col-sm-3 col-form-label">HDL</label>
+                                        <div class="col-sm-9">
+                                            <input type="text" class="form-control" id="hdl" name="hdl" placeholder="M-35-80mg/dl F-42-88mg/dl">
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label for="ldl" class="col-sm-3 col-form-label">LDL</label>
+                                        <div class="col-sm-9">
+                                            <input type="text" class="form-control" id="ldl" name="ldl" placeholder="<130mg/dl (desirable) 130-159mg/dl (Borderline high risk for CHD) >160mg/dl (high risk for CHD)">
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label for="vldl" class="col-sm-3 col-form-label">VLDL</label>
+                                        <div class="col-sm-9">
+                                            <input type="text" class="form-control" id="vldl" name="vldl" placeholder="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
 
-                                                    <div class="form-group row">
-                                                        <!-- Hemoglobin -->
-                                                        <label for="creatine" class="col-sm-3 col-form-label">Creatine</label>
-                                                        <div class="col-sm-9">
-                                                            <input type="text" class="form-control" id="creatine"
-                                                                name="creatine" placeholder="M-0.6-1.5mg/dl F-0.6-1.4mg/dl">
-                                                        </div>
-                                                    </div>
-                                                    <div class="form-group row">
-                                                        <!-- Hemoglobin -->
-                                                        <label for="uric acid" class="col-sm-3 col-form-label">Uric acid</label>
-                                                        <div class="col-sm-9">
-                                                            <input type="text" class="form-control" id="uric acid"
-                                                                name="uric acid" placeholder="M-3.4-7.0mg/dl F-2.4-5.7mg/dl">
+                            <div class="card card-primary">
+                                <div class="card-header">
+                                    <h3 class="card-title">LFT</h3>
+                                    <div class="card-tools">
+                                        <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                                            <i class="fas fa-minus"></i>
+                                        </button>
+                                        <button type="button" class="btn btn-tool" data-card-widget="maximize">
+                                            <i class="fas fa-expand"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <table class="table table-bordered">
+                                        <thead>
+                                            <tr>
+                                                <th>Test</th>
+                                                <th>Result</th>
+                                                <th>Normal Value</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Bilirubin (Total)</td>
+                                                <td><input type="text" class="form-control" id="bilirubinTotal" name="bilirubinTotal" placeholder="0.2-1.0 mg/dl"></td>
+                                                <td>0.2-1.0 mg/dl</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Bilirubin (Conjugated)</td>
+                                                <td><input type="text" class="form-control" id="bilirubinConjugated" name="bilirubinConjugated" placeholder="Upto 0.25 mg/dl"></td>
+                                                <td>Upto 0.25 mg/dl</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Bilirubin (Un-Conjugated)</td>
+                                                <td><input type="text" class="form-control" id="bilirubinUnconjugated" name="bilirubinUnconjugated" placeholder="Upto 0.75 mg/dl"></td>
+                                                <td>Upto 0.75 mg/dl</td>
+                                            </tr>
+                                            <tr>
+                                                <td>SGPT</td>
+                                                <td><input type="text" class="form-control" id="sgpt" name="sgpt" placeholder="5-40 IU/L"></td>
+                                                <td>5-40 IU/L</td>
+                                            </tr>
+                                            <tr>
+                                                <td>SGOT</td>
+                                                <td><input type="text" class="form-control" id="sgot" name="sgot" placeholder="5-40 IU/L"></td>
+                                                <td>5-40 IU/L</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Alkaline Phosphatase</td>
+                                                <td><input type="text" class="form-control" id="alkalinePhosphatase" name="alkalinePhosphatase" placeholder="35-140 U/L"></td>
+                                                <td>35-140 U/L</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Total Protein</td>
+                                                <td><input type="text" class="form-control" id="totalProtein" name="totalProtein" placeholder="6.0-8.0 gm/dl"></td>
+                                                <td>6.0-8.0 gm/dl</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Albumin</td>
+                                                <td><input type="text" class="form-control" id="albumin" name="albumin" placeholder="3.5-5.0 gm/dl"></td>
+                                                <td>3.5-5.0 gm/dl</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Globulin</td>
+                                                <td><input type="text" class="form-control" id="globulin" name="globulin" placeholder="2.5-3.0 gm/dl"></td>
+                                                <td>2.5-3.0 gm/dl</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
 
-                                                        </div>
 
-                                                        <div class="card card-primary">
-                                                            <div class="card-header">
-                                                                <h3 class="card-title">Lipid Profile</h3>
-                                                                <div class="card-tools">
-                                                                    <button type="button" class="btn btn-tool" data-card-widget="collapse">
-                                                                        <i class="fas fa-minus"></i>
-                                                                    </button>
-                                                                    <button type="button" class="btn btn-tool" data-card-widget="maximize">
-                                                                        <i class="fas fa-expand"></i>
-                                                                    </button>
-                                                                </div>
-                                                            </div>
-                                                            <div class="card-body">
-                                                                <div class="form-group row">
-                                                                    <label for="cholesterol" class="col-sm-3 col-form-label">Cholesterol</label>
-                                                                    <div class="col-sm-9">
-                                                                        <input type="text" class="form-control" id="cholesterol" name="cholesterol" placeholder="150-200mg/dl">
-                                                                    </div>
-                                                                </div>
-                                                                <div class="form-group row">
-                                                                    <label for="triglyceride" class="col-sm-3 col-form-label">Triglyceride</label>
-                                                                    <div class="col-sm-9">
-                                                                        <input type="text" class="form-control" id="triglyceride" name="triglyceride" placeholder="60-170mg/dl">
-                                                                    </div>
-                                                                </div>
-                                                                <div class="form-group row">
-                                                                    <label for="hdl" class="col-sm-3 col-form-label">HDL</label>
-                                                                    <div class="col-sm-9">
-                                                                        <input type="text" class="form-control" id="hdl" name="hdl" placeholder="M-35-80mg/dl F-42-88mg/dl">
-                                                                    </div>
-                                                                </div>
-                                                                <div class="form-group row">
-                                                                    <label for="ldl" class="col-sm-3 col-form-label">LDL</label>
-                                                                    <div class="col-sm-9">
-                                                                        <input type="text" class="form-control" id="ldl" name="ldl" placeholder="<130mg/dl(desirable) 130-159mg/dl(Borderline high risk for CHD) >160mg/dl(high risk for CHD)">
-                                                                    </div>
-                                                                </div>
-                                                                <div class="form-group row">
-                                                                    <label for="vldl" class="col-sm-3 col-form-label">VLDL</label>
-                                                                    <div class="col-sm-9">
-                                                                        <input type="text" class="form-control" id="vldl" name="vldl" placeholder="">
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
+                            <div class="card card-primary">
+                                <div class="card-header">
+                                    <h3 class="card-title">Widal Slide Agglutination</h3>
+                                    <div class="card-tools">
+                                        <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                                            <i class="fas fa-minus"></i>
+                                        </button>
+                                        <button type="button" class="btn btn-tool" data-card-widget="maximize">
+                                            <i class="fas fa-expand"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <table class="table table-bordered">
+                                        <thead>
+                                            <tr>
+                                                <th></th>
+                                                <th>1:20</th>
+                                                <th>1:40</th>
+                                                <th>1:80</th>
+                                                <th>1:160</th>
+                                                <th>1:320</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>S.typhi (O)</td>
+                                                <td><input type="text" class="form-control" name="styphi_o_1_20"></td>
+                                                <td><input type="text" class="form-control" name="styphi_o_1_40"></td>
+                                                <td><input type="text" class="form-control" name="styphi_o_1_80"></td>
+                                                <td><input type="text" class="form-control" name="styphi_o_1_160"></td>
+                                                <td><input type="text" class="form-control" name="styphi_o_1_320"></td>
+                                            </tr>
+                                            <tr>
+                                                <td>S.typhi (H)</td>
+                                                <td><input type="text" class="form-control" name="styphi_h_1_20"></td>
+                                                <td><input type="text" class="form-control" name="styphi_h_1_40"></td>
+                                                <td><input type="text" class="form-control" name="styphi_h_1_80"></td>
+                                                <td><input type="text" class="form-control" name="styphi_h_1_160"></td>
+                                                <td><input type="text" class="form-control" name="styphi_h_1_320"></td>
+                                            </tr>
+                                            <tr>
+                                                <td>S.paratyphi A (H)</td>
+                                                <td><input type="text" class="form-control" name="sparatyphi_a_h_1_20"></td>
+                                                <td><input type="text" class="form-control" name="sparatyphi_a_h_1_40"></td>
+                                                <td><input type="text" class="form-control" name="sparatyphi_a_h_1_80"></td>
+                                                <td><input type="text" class="form-control" name="sparatyphi_a_h_1_160"></td>
+                                                <td><input type="text" class="form-control" name="sparatyphi_a_h_1_320"></td>
+                                            </tr>
+                                            <tr>
+                                                <td>S.paratyphi B (H)</td>
+                                                <td><input type="text" class="form-control" name="sparatyphi_b_h_1_20"></td>
+                                                <td><input type="text" class="form-control" name="sparatyphi_b_h_1_40"></td>
+                                                <td><input type="text" class="form-control" name="sparatyphi_b_h_1_80"></td>
+                                                <td><input type="text" class="form-control" name="sparatyphi_b_h_1_160"></td>
+                                                <td><input type="text" class="form-control" name="sparatyphi_b_h_1_320"></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+
+                            <div class="card card-primary">
+                                <div class="card-header">
+                                    <h3 class="card-title">Urine RE</h3>
+                                    <div class="card-tools">
+                                        <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                                            <i class="fas fa-minus"></i>
+                                        </button>
+                                        <button type="button" class="btn btn-tool" data-card-widget="maximize">
+                                            <i class="fas fa-expand"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <table class="table table-bordered">
+                                        <thead>
+                                            <tr>
+                                                <th>Test</th>
+                                                <th>Result</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>VOL</td>
+                                                <td><input type="text" class="form-control" id="vol" name="vol"></td>
+                                            </tr>
+                                            <tr>
+                                                <td>COL</td>
+                                                <td><input type="text" class="form-control" id="col" name="col"></td>
+                                            </tr>
+                                            <tr>
+                                                <td>APP</td>
+                                                <td><input type="text" class="form-control" id="app" name="app"></td>
+                                            </tr>
+                                            <tr>
+                                                <td>SP GR</td>
+                                                <td><input type="text" class="form-control" id="spGr" name="spGr"></td>
+                                            </tr>
+                                            <tr>
+                                                <td>BLO</td>
+                                                <td><input type="text" class="form-control" id="blo" name="blo"></td>
+                                            </tr>
+                                            <tr>
+                                                <td>SED</td>
+                                                <td><input type="text" class="form-control" id="sed" name="sed"></td>
+                                            </tr>
+                                            <tr>
+                                                <td>REAC</td>
+                                                <td><input type="text" class="form-control" id="reac" name="reac"></td>
+                                            </tr>
+                                            <tr>
+                                                <td>P. CELL</td>
+                                                <td><input type="text" class="form-control" id="pCell" name="pCell"></td>
+                                            </tr>
+                                            <tr>
+                                                <td>EPI CELL</td>
+                                                <td><input type="text" class="form-control" id="epiCell" name="epiCell"></td>
+                                            </tr>
+                                            <tr>
+                                                <td>RBC</td>
+                                                <td><input type="text" class="form-control" id="rbc" name="rbc"></td>
+                                            </tr>
+                                            <tr>
+                                                <td>OTHER</td>
+                                                <td><input type="text" class="form-control" id="other" name="other"></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+
+                            <div class="card card-primary">
+                                <div class="card-header">
+                                    <h3 class="card-title">Others</h3>
+                                    <div class="card-tools">
+                                        <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                                            <i class="fas fa-minus"></i>
+                                        </button>
+                                        <button type="button" class="btn btn-tool" data-card-widget="maximize">
+                                            <i class="fas fa-expand"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <div class="form-group row">
+                                        <label for="RA" class="col-sm-3 col-form-label">RA</label>
+                                        <div class="col-sm-9">
+                                            <input type="text" class="form-control" id="RA" name="RA" placeholder="upto 20 IU/ml">
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label for="crp" class="col-sm-3 col-form-label">CRP</label>
+                                        <div class="col-sm-9">
+                                            <input type="text" class="form-control" id="crp" name="crp" placeholder="upto 08 mg/l">
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label for="aso" class="col-sm-3 col-form-label">ASO</label>
+                                        <div class="col-sm-9">
+                                            <input type="text" class="form-control" id="aso" name="aso" placeholder="upto 200 IU/ml" />
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label for="ldl" class="col-sm-3 col-form-label">Dengue NS <sub>1</sub> Antigen</label>
+                                        <div class="col-sm-9">
+                                            <label for="antigen"> Reactive
+                                                <input type="radio" id="dengue_antigen" name="dengue_antigen" value="Reactive" />
+                                            </label>
+
+                                            <label for="antigen"> Non - Reactive
+                                                <input type="radio" id="dengue_antigen" name="dengue_antigen" value="Non-Reactive" />
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label for="ldl" class="col-sm-3 col-form-label">Dengue IgM Antibody</label>
+                                        <div class="col-sm-9">
+                                            <label for="antigen"> Reactive
+                                                <input type="radio" id="dengue_antibody" name="dengue_antibody" value="Reactive" />
+                                            </label>
+
+                                            <label for="antigen"> Non - Reactive
+                                                <input type="radio" id="dengue_antibody" name="dengue_antibody" value="Non-Reactive" />
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
 
 
 
-
-                                                        <div class="col-sm-3 row">
-                                                            <button type="submit" class="btn btn-success"> Save </button>
-                                                        </div>
+                            <div class="col-sm-3 row">
+                                <button type="submit" class="btn btn-success"> Save </button>
+                            </div>
 
                         </form>
                     </div>
